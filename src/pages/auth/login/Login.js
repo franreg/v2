@@ -16,8 +16,8 @@ export default function() {
                     >
                         <div class="card card-plain">
                         <div class="card-header pb-0 text-start">
-                            <h4 class="font-weight-bolder">Sign In</h4>
-                            <p class="mb-0">Enter your email and password to sign in</p>
+                            <h4 class="font-weight-bolder">Connexion</h4>
+                            <p class="mb-0">Entrer votre email et votre mot de passe pour la connexion</p>
                         </div>
                         <div class="card-body">
                             <form>
@@ -33,7 +33,7 @@ export default function() {
                                     <input
                                     type="email"
                                     class="form-control form-control-lg"
-                                    placeholder="Password"
+                                    placeholder="mot de passe"
                                     aria-label="Password"
                                     />
                                 </div>
@@ -44,7 +44,7 @@ export default function() {
                                     id="rememberMe"
                                     />
                                     <label class="form-check-label" for="rememberMe"
-                                    >Remember me</label
+                                    >Se souvenir de moi</label
                                     >
                                 </div>
                                 <div class="text-center">
@@ -52,20 +52,12 @@ export default function() {
                                     type="button"
                                     class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0"
                                     >
-                                    Sign in
+                                        Connexion
                                     </button>
                                 </div>
                             </form>
                         </div>
-                        <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                            <p class="mb-4 text-sm mx-auto">
-                            Don't have an account?
-                            <Link
-                                to="#"
-                                class="text-primary text-gradient font-weight-bold"
-                                >Sign up</Link>
-                            </p>
-                        </div>
+                       
                         </div>
                     </div>
                     <div

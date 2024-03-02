@@ -1,0 +1,14 @@
+.n a{
+    color: aliceblue;
+}
+.dropdown-menu {
+    max-height: 300px; /* ajustez la hauteur selon vos besoins */
+    overflow-y: auto;
+}
+.margin-right-50 > * {
+    margin-right: 250px;
+}
+
+.marg{
+    margin-top: 20px;
+}
