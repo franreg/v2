@@ -1,0 +1,33 @@
+.card {
+    border: none !important;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card-title {
+    font-size: 21px !important;
+    margin-top: 10px;
+    color: #333 !important;
+  }
+  .card-text {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #666;
+  }
+
+.pourcentage {
+    display: flex;
+}
+
+.pourcentage > div {
+    margin: auto 1rem;
+}
+
+.pourcentage > div:not(:last-child) {
+    border-right: 1px dashed blue;
+    padding: 1rem;
+  }
