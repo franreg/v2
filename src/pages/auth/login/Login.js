@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom'
 import './Login.css'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default function() {
+    const [email, setEmail] = useState("");
+     const [password, setPassword] = useState("");
+     const [message, setMessage] = useState("");
+    const [loggedIn, setLoggedIn] = useState(false);
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Empêcher le comportement par défaut de l'envoi du formulaire
+    
+        // Envoyer les données du formulaire où vous en avez besoin, par exemple, à un serveur backend
+        console.log('Password:', password);
+        console.log('Email:', email);
+        if (email === "admin@gmail.com" && password === "admin") {
+            // Connexion réussie
+            setMessage("Bienvenue !");
+            setLoggedIn(true);
+            alert("Bienvenue !");
+          } else {
+            // Connexion échouée
+            setMessage("La connexion a échoué. Veuillez vérifier vos identifiants.");
+            setLoggedIn(false);
+          }    
+      };
     return (
         <div>
             <main class="main-content mt-0">
@@ -20,21 +41,27 @@ export default function() {
                             <p class="mb-0">Entrer votre email et votre mot de passe pour la connexion</p>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div class="mb-3">
                                     <input
                                     type="email"
                                     class="form-control form-control-lg"
                                     placeholder="Email"
                                     aria-label="Email"
+                                    value={email}
+                                    onChange={(event) => setEmail(event.target.value)}
+                                    required="required"
                                     />
                                 </div>
                                 <div class="mb-3">
                                     <input
-                                    type="email"
+                                    type="password"
                                     class="form-control form-control-lg"
                                     placeholder="mot de passe"
-                                    aria-label="Password"
+                                    aria-label="password"
+                                    value={password}
+                                    onChange={(event) => setPassword(event.target.value)}
+                                    required = "required"
                                     />
                                 </div>
                                 <div class="form-check form-switch">
@@ -49,12 +76,13 @@ export default function() {
                                 </div>
                                 <div class="text-center">
                                     <button
-                                    type="button"
+                                    type="submit"
                                     class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0"
                                     >
                                         Connexion
                                     </button>
                                 </div>
+                                <p className={`mb-0 ${message ? 'err' : ''}`}>{message}</p>
                             </form>
                         </div>
                        
@@ -68,11 +96,14 @@ export default function() {
                         >
                         <span class="mask bg-gradient-primary opacity-6"></span>
                         <h4 class="mt-5 text-white font-weight-bolder position-relative">
-                            "Attention is the new currency"
+                            Chers responsables de la gestion des élections,
                         </h4>
                         <p class="text-white position-relative">
-                            The more effortless the writing looks, the more effort the
-                            writer actually put into the process.
+                        En tant que gardiens de l'intégrité et de la transparence de notre processus électoral, nous jouons un rôle essentiel dans le bon déroulement des élections. Notre travail a un impact direct sur la confiance que la population accorde à notre système démocratique.
+                        Soyons attentifs aux préoccupations et aux besoins de tous les acteurs impliqués dans le processus électoral, en favorisant le dialogue et la coopération. Travaillons ensemble pour surmonter les défis et garantir l'intégrité de nos élections.
+                        </p>
+                        <p class="text-white position-relative">
+                            Nous sommes heureux de notre dévouement et notre engagement envers la démocratie. Votre travail a un impact significatif sur l'avenir de notre nation.
                         </p>
                         </div>
                     </div>

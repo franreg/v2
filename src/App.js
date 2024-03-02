@@ -10,6 +10,7 @@ import RecensementElecteur from './pages/fronted/recensement-electeur/Recensemen
 import ResultatPublie from './pages/fronted/resultat-publie/ResultatPublie';
 import ElecteurAccueil from './pages/electeur/electeurAccueil/ElecteurAccueil';
 import Candidat from './pages/electeur/candidat/Candidat';
+import Elpres from './pages/election/Elpres';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/admin.connexion/collection-electorale" element={<Login />} />
           <Route path='/admin.dashboard/collection-electorale' element={<Master />}>
             <Route path='' element={<Dashboard />} />
+            <Route path="/admin.dashboard/collection-electorale/e" element={<Elpres />} />
           </Route> 
       </Routes>
     </BrowserRouter>

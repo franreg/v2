@@ -12,6 +12,11 @@ export default function() {
         setMenuVisible(!menuVisible);
     };
 
+    const [otherElementsVisible, setOtherElementsVisible] = useState(true);
+    const handleToggleElements = () => {
+        setOtherElementsVisible(!otherElementsVisible);
+    };
+
     return (
         <div>
             <div class="min-height-300 bg-primary position-absolute w-100"></div>
@@ -24,7 +29,7 @@ export default function() {
                 target="_blank"
                 >
                 <img
-                    src="../assets/img/logo-ct-dark.png"
+                    src="../img/logo.jpg"
                     class="navbar-brand-img h-100"
                     
                 />
@@ -35,7 +40,7 @@ export default function() {
             <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="../pages/dashboard.html">
+                        <a class="nav-link active" href="/admin.dashboard/collection-electorale">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center"
                         >
@@ -43,6 +48,14 @@ export default function() {
                         </div>
                         <span class="nav-link-text ms-1">Dashboard</span>
                         </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link " href="/admin.dashboard/collection-electorale/e">
+                    <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Type élections</span>
+                    </a>
                     </li>
                 </ul>
             </div>
@@ -63,10 +76,10 @@ export default function() {
                             class="breadcrumb-item text-sm text-white active"
                             aria-current="page"
                         >
-                            Dashboard
+                            Menu
                         </li>
                         </ol>
-                        <h6 class="font-weight-bolder text-white mb-0">Dashboard</h6>
+                        <h6 class="font-weight-bolder text-white mb-0">Menu</h6>
                        
                     </nav>
                     
@@ -193,177 +206,9 @@ export default function() {
                     </div>
                 </div>    
                 </nav>
-                <div class="container-fluid py-4">
-                    <div class="row">
-                        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                            <div class="card">
-                                <a href='#'>
-                                    <div class="card-body p-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <div class="numbers">
-                                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Élections présidentielle</p>    
-                                                </div>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                                                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>         
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                            <a href="">
-                                <div class="card">
-                                    <div class="card-body p-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <div class="numbers">
-                                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Élections  à référendums</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                                                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                            <a href='#'>
-                                <div class="card">
-                                    <div class="card-body p-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <div class="numbers">
-                                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Élections référendaires</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                                                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-xl-3 col-sm-6">
-                            <a href="#">
-                                <div class="card">
-                                    <div class="card-body p-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <div class="numbers">
-                                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Élections parlementaires</p>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                                                    <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div className="row marg">
-                        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                            <a href="#">
-                                <div class="card">
-                                    <div class="card-body p-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <div class="numbers">
-                                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Élections législatives</p>    
-                                                </div>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                                                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>         
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>    
-                        </div>
-                        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                            <a href=''>
-                                <div class="card">
-                                    <div class="card-body p-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <div class="numbers">
-                                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Élections régionales</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                                                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                            <a href=''>
-                                <div class="card">
-                                    <div class="card-body p-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <div class="numbers">
-                                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Élections locales</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                                                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-xl-3 col-sm-6">
-                            <a href=''>
-                                <div class="card">
-                                    <div class="card-body p-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <div class="numbers">
-                                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Élections municipales</p>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                                                    <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                  <Outlet />
-                </div>
+                <Outlet>
+                </Outlet>
+               
             </main>
         </div>
     )
